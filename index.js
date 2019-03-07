@@ -29,7 +29,14 @@
 // Alternatively send an email with your solution to felix.weinberger@gmail.com
 
 function validParens (parens) {
-  // your code here
-}
+  parens = parens.split('');
+  let balance = 0;
+  for (let i = 0; i < parens.length; i++) {
+    if (parens[i] === '(') balance++;
+    else if (parens[i] = ')') balance--;
+  }
+  if (balance === 0) return true;
+  return false;
+ }
 
 module.exports = validParens;
